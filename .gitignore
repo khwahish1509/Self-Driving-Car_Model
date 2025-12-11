@@ -27,11 +27,11 @@ ENV/
 .env/
 .venv/
 
-# Logs
-logs/
-*.log
-*.out
-*.err
+# # Logs
+# logs/
+# *.log
+# *.out
+# *.err
 
 # Data files
 data/processed/
