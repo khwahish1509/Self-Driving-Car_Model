@@ -25,7 +25,6 @@ def main(args):
     os.makedirs(os.path.dirname(args.model_out), exist_ok=True)
     os.makedirs("logs/training_plots", exist_ok=True)
 
-    # Load the dataset
     samples = load_samples(args.csv)
     train_samples, val_samples = train_test_split(samples, test_size=0.2, random_state=42)
 
@@ -54,7 +53,7 @@ def main(args):
         monitor="val_loss", factor=0.5, patience=3, verbose=1
     )
     early = tf.keras.callbacks.EarlyStopping(
-        monitor="val_loss", patience=7, restore_best_weights=True, verbose=1
+          monitor="val_loss", patience=7, restore_best_weights=True, verbose=1
     )
 
     # ---------------------------------------------------------
@@ -72,7 +71,7 @@ def main(args):
         )
 
     except Exception as e:
-        print("\n❌ TRAINING FAILED!")
+        print("\nTRAINING FAILED!")
         print("Error message:")
         print("-------------------------------------")
         print(e)
