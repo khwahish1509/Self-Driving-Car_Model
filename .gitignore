@@ -54,8 +54,8 @@ data/raw/run_1/IMG/
 .DS_Store
 Thumbs.db
 
-# Model files
-logs/models/
+# # Model files
+# logs/models/
 
-# Training plots
-logs/training_plots/
+# # Training plots
+# logs/training_plots/
